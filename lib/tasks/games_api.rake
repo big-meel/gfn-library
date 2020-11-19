@@ -10,7 +10,16 @@ namespace :games do
     games = JSON.parse(response)
 
     games.each do |g|
-      gfn = Game.new(id: g['id'])
+      gfn = Game.new(
+        id: g['id'],
+        title: g['title'],
+        sort_name: g['sortName'],
+        is_fully_optimized: g['isFullyOptimized'],
+        steam_url: g['steamUrl'],
+        store: g['store'],
+        publisher: g['publisher'],
+        status: g['status']
+      )
       gfn.save
     end
     
