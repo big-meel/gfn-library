@@ -1,7 +1,8 @@
 <h1>Catalog </h1>
 
 <% @games.each do |game|  %>
- <div> 
-  <%= game["title"] %> 
+ <div class="g-card"> 
+  <%= image_tag  "gfn-placeholder.jpg" %>
+  <p><%= game["title"] %></p> 
  </div>
 <% end %>
