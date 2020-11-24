@@ -22,4 +22,10 @@
 
  .g-card {
    display: grid;
+   justify-content: center;
+ }
+
+ .cover-img {
+   width: 400px;
+   height: 250px;
  }

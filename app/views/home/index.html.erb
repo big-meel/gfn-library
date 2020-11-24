@@ -2,7 +2,7 @@
 
 <% @games.each do |game|  %>
  <div class="g-card"> 
-  <%= image_tag  "gfn-placeholder.jpg" %>
+  <%= image_tag  "gfn-placeholder.jpg", class: "cover-img" %>
   <p><%= game["title"] %></p> 
  </div>
 <% end %>
