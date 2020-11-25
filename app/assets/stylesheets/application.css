@@ -20,9 +20,16 @@
    color: #49cc0c;
  }
 
- .g-card {
-   display: grid;
-   justify-content: center;
+ .cards {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 25px;
+  }
+  
+  .g-card {
+    /* display: grid;
+   justify-content: center; */
  }
 
  .cover-img {
