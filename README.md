@@ -26,11 +26,11 @@ the records up to date. (This is also set to run every Thursday)
 
 ## Coming Soon:
 
-Sorting (Category, Store, etc...)
-About Project
-Links to store to purchase games
-Link to forum posts
-Link to error/bug/request form for GFN
+- Sorting (Category, Store, etc...), 
+- About Project, 
+- Links to store to purchase games
+- Link to forum posts
+- Link to error/bug/request form for GFN
 
 
  
