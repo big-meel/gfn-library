@@ -57,3 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'httparty'
 
 gem 'whenever', require: false
+
+gem 'nokogiri'
