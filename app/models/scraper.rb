@@ -1,7 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 
-class scraper
+class Scraper
 
 
   
