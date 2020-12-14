@@ -81,6 +81,7 @@ GEM
     ffi (1.13.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hiredis (0.6.3)
     httparty (0.18.1)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -226,6 +227,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  hiredis
   httparty
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
@@ -234,6 +236,7 @@ DEPENDENCIES
   pg
   puma (~> 4.1)
   rails (~> 6.0.3, >= 6.0.3.4)
+  redis (>= 4.0)
   sass-rails (>= 6)
   selenium-webdriver
   spring

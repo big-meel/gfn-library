@@ -1,6 +1,6 @@
 <h1>Games#index</h1>
 <div class="g-search">
-  <%= form_tag games_path, method: :get do %>
+  <%= form_tag games_path, 'data-reflex':"submit->GameReflex#search",  method: :get do %>
     <%= text_field_tag :search, params[:search] %>
   <% end %>
 </div>
