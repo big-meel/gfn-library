@@ -59,3 +59,4 @@ gem 'httparty'
 gem 'whenever', require: false
 
 gem 'nokogiri'
+gem "stimulus_reflex", "~> 3.4.0-pre9"
