@@ -22,6 +22,6 @@
 set :environment, "development"
 
 every :thursday, at: [ '12:00 pm', '12:00 am' ] do
-  # rake  "games:create_files"
+  rake  "games:create_files"
   rake  "games:update_files"
 end
