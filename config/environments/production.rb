@@ -54,14 +54,17 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
-
-  # Use a real queuing backend for Active Job (and separate queues per environment).
-  # config.active_job.queue_adapter     = :resque
-  # config.active_job.queue_name_prefix = "gfn_library_production"
-
-  config.action_mailer.perform_caching = false
-
+  config.cache_store = :redis_cache_Store, (driver: :hiredis, url: ENV.fetch("REDIS_URL"))
+  config.session_store :redis_session_store, {
+    key: Rails.application.credentials.app_session_key,
+    serializer: :json,
+    redis: {
+      expire_after: 1.year,
+      ttl: 1.year,
+      key_prefix: "app:session:",
+      url: ENV.fetch("HEROKU_REDIS_MAROON_URL")
+    }
+  }
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
