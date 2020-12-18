@@ -12,6 +12,7 @@ This is a fully open sourced project so feel free to contribute and suggest new 
 4. `cd` into repo directory
 5. Set up postgresql
 6. Run `bundle install` 
+7. Remember to configure your `database.yml` to work with postgresql
 
 ## Get list of games locally:
 After ensuring database is set up, in the app directory run `rake games:create_files`.
