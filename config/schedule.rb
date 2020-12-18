@@ -19,7 +19,7 @@
 
 # Learn more: http://github.com/javan/whenever
 
-set :environment, "development"
+set :environment, "production"
 
 every :thursday, at: [ '12:00 pm', '12:00 am' ] do
   rake  "games:create_files"
