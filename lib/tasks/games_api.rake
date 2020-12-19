@@ -19,7 +19,8 @@ namespace :games do
           steam_url: g['steamUrl'],
           store: g['store'],
           publisher: g['publisher'],
-          status: g['status']
+          status: g['status'],
+          genres: g['genres']
         )
         gfn.save
       end
@@ -46,7 +47,8 @@ namespace :games do
         steam_url: g['steamUrl'],
         store: g['store'],
         publisher: g['publisher'],
-        status: g['status']
+        status: g['status'],
+        genres: g['genres']
       ) rescue nil
     end
 

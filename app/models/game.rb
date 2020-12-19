@@ -1,6 +1,7 @@
 class Game < ApplicationRecord
 
   # has_one_attached :cover
+  serialize :genres
 
   def self.search(keyword)
     if keyword
