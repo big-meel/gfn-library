@@ -69,3 +69,5 @@ gem "redis", ">= 4.0", :require => ["redis", "redis/connection/hiredis"]
 gem "hiredis"
 
 gem "redis-session-store", "~> 0.11.3"
+
+gem "kaminari", "~> 1.2"
