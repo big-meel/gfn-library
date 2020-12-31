@@ -7,7 +7,7 @@ class GamesController < ApplicationController
   private
 
   def search_params
-    params.permit(:search)
+    params.permit(:search, :genre, :online_store)
   end
 
 end
