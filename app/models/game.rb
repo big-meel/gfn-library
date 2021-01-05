@@ -1,4 +1,6 @@
 class Game < ApplicationRecord
+
+  require 'set'
   
   # has_one_attached :cover
   serialize :genres
@@ -14,14 +16,18 @@ class Game < ApplicationRecord
       return all
     end
   end
-  
-  # def self.filter_by_genre(records, genre)
-  #   if genre
-  #     return records.select { |game| Set(genre).subset?(Set(game.genres)) }
-  #   else
-  #     return records.all
-  #   end
-  # end
 
+  def self.filter_by_genre(records, genre)
+    if genre
+        return records.select { |game| Set(genre).subset?(Set(game.genres)) }
+      else
+        return records.all
+      end
+    end
+
+  def self.all_genres
+    ["Action","Adventure", "Casual", "Free To Play", "Indie", "Massively Multiplayer Online", "Role Playing", "Simulation", "Sports", "Racing",
+    "Strategy"]
+  end
 end
 

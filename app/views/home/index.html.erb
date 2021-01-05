@@ -4,7 +4,10 @@
   <%= form_tag games_path, method: :get do %>
     <%= text_field_tag :search, params[:search], class: "py-2 text-sm text-white bg-gray-900 rounded-md pl-10 focus:outline-none focus:bg-white focus:text-gray-900",
       placeholder: "Search" %>
-    
+
+    <%= select_tag :genre, options_for_select( Game.all_genres, params[:genre] ) %>
+
+    <%= select_tag :store, options_for_select( ["Action"] ) %>
   <% end %>
 </div>
 

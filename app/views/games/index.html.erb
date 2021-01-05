@@ -2,6 +2,10 @@
 <div class="g-search">
   <%= form_tag games_path, 'data-reflex':"submit->GameReflex#search",  method: :get do %>
     <%= text_field_tag :search, params[:search] %>
+
+    <%= select_tag :genre, options_for_select( Game.all_genres, params[:genre] ) %>
+
+    <%= select_tag :store, options_for_select( ["Action"] ) %>
   <% end %>
 </div>
 
