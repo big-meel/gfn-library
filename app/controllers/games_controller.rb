@@ -7,7 +7,7 @@ class GamesController < ApplicationController
     # @games = Game.all
     @games = Game.search(params[:search])
 
-    @games = filter_by_genre(@games, params[:genre])
+    # @games = filter_by_genre(@games, params[:genre])
     # byebug
   end
 

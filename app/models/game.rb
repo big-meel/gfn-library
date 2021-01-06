@@ -17,13 +17,13 @@ class Game < ApplicationRecord
     end
   end
 
-  def self.filter_by_genre(records, genre)
-    if genre
-        return records.select { |game| Set(genre).subset?(Set(game.genres)) }
-      else
-        return records.all
-      end
-    end
+  # def self.filter_by_genre(records, genre)
+  #   if genre
+  #       return records.select { |game| Set(genre).subset?(Set(game.genres)) }
+  #     else
+  #       return records.all
+  #     end
+  #   end
 
   def self.all_genres
     ["Action","Adventure", "Casual", "Free To Play", "Indie", "Massively Multiplayer Online", "Role Playing", "Simulation", "Sports", "Racing",
