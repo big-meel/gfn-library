@@ -10,7 +10,6 @@
     "stimulus_reflex": "^3.4.0-pre9",
     "svelte": "^3.29.7",
     "svelte-loader": "^2.13.6",
-    "tailwindcss": "^2.0.2",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
