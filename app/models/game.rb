@@ -18,10 +18,10 @@ class Game < ApplicationRecord
   end
 
 
-  def self.scrape_images()
+  def self.scrape_images(title)
     url = "https://api.igdb.com/v4/games"
     headers = { "Client-ID" => ENV["ClientID"], Authorization: ENV["Authorization"] }
-    query = { fields: 'cover.*', search: 'Cyberpunk 2077' }
+    query = { fields: 'cover.*', search: title }
 
     response = HTTParty.post(
       url,
@@ -30,7 +30,7 @@ class Game < ApplicationRecord
     ).to_s
 
 
-    JSON.parse(response)
+    JSON.parse(response)[0]["cover"] rescue nil
 
   end
 

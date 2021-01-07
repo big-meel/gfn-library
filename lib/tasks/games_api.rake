@@ -54,4 +54,20 @@ namespace :games do
 
     puts 'Updated!'
   end
+
+
+  desc "Update Images"
+  task :update_images => [ :environment ] do
+    games = Game.all.select { |game| game.image_url.nil? }
+    games.each_with_index do |g, i|
+      response = Game.scrape_images(g.title)
+
+      g.update(image_url: "https://images.igdb.com/igdb/image/upload/t_cover_big/#{response["image_id"]}.jpg") unless response.nil? || !g.image_url.nil?
+
+      puts "#{(i/games.count.to_f) * 100} Complete..."
+    end
+
+    puts "Done!"
+  end
+
 end

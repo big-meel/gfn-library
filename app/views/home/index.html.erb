@@ -14,7 +14,7 @@
 <div class= "cards">
   <% @games.each do |game|  %>
   <div class="g-card"> 
-    <%= image_tag  "gfn-placeholder.jpg", class: "cover-img" %>
+    <%= image_tag  game.image_url.nil? ? "gfn-placeholder.jpg" : game.image_url, class: "cover-img" %>
     <p><%= game["title"] %></p> 
   </div>
   <% end %>
