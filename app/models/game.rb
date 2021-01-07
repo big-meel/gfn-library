@@ -17,6 +17,23 @@ class Game < ApplicationRecord
     end
   end
 
+
+  def self.scrape_images()
+    url = "https://api.igdb.com/v4/games"
+    headers = { "Client-ID" => ENV["ClientID"], Authorization: ENV["Authorization"] }
+    query = { fields: 'cover.*', search: 'Cyberpunk 2077' }
+
+    response = HTTParty.post(
+      url,
+      headers: headers,
+      query: query
+    ).to_s
+
+
+    JSON.parse(response)
+
+  end
+
   # def self.filter_by_genre(records, genre)
   #   if genre
   #       return records.select { |game| Set(genre).subset?(Set(game.genres)) }

@@ -71,3 +71,6 @@ gem "hiredis"
 gem "redis-session-store", "~> 0.11.3"
 
 gem "kaminari", "~> 1.2"
+
+
+gem "dotenv-rails", "~> 2.7", groups: [:development, :test]
