@@ -3,9 +3,9 @@
   <%= form_tag games_path, 'data-reflex':"submit->GameReflex#search",  method: :get do %>
     <%= text_field_tag :search, params[:search] %>
 
-    <%= select_tag :genre, options_for_select( Game.all_genres, params[:genre] ) %>
+    <%# select_tag :genre, options_for_select( Game.all_genres, params[:genre] ) %>
 
-    <%= select_tag :store, options_for_select( ["Action"] ) %>
+    <%# select_tag :store, options_for_select( ["Action"] ) %>
   <% end %>
 </div>
 
@@ -13,7 +13,7 @@
 <div class= "cards">
   <% @games.each do |game|  %>
   <div class="g-card"> 
-    <%= image_tag  "gfn-placeholder.jpg", class: "cover-img" %>
+    <%= image_tag  game.image_url.nil? ? "gfn-placeholder.jpg" : game.image_url, class: "cover-img" %>
     <p><%= game["title"] %>  (<%= game.store %>)</p> 
   </div>
   <% end %>
