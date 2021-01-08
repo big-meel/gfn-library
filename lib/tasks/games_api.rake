@@ -62,7 +62,7 @@ namespace :games do
     games.each_with_index do |g, i|
       response = Game.scrape_images(g.title)
 
-      g.update(image_url: "https://images.igdb.com/igdb/image/upload/t_cover_big/#{response["image_id"]}.jpg") unless response.nil? || !g.image_url.nil?
+      g.update(image_url: "https://images.igdb.com/igdb/image/upload/t_cover_big/#{response["image_id"]}.jpg") unless response.nil?
 
       puts "#{(i/games.count.to_f) * 100} Complete..."
     end
