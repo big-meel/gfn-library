@@ -22,17 +22,14 @@
 
  .cards {
     display: grid;
-    justify-content: center;
-    grid-template-columns: auto auto auto;
-    grid-gap: 25px;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
   
-//   .g-card {
-//     /* display: grid;
-//    justify-content: center; */
-//  }
+  .g-card img{
+    max-width: 264px;
+    max-height: 352px;
+  }
 
- .cover-img {
-   width: 400px;
-   height: 250px;
- }
+  @media screen and (min-width: 600px) {
+  }
