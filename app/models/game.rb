@@ -19,9 +19,19 @@ class Game < ApplicationRecord
 
 
   def self.scrape_images(title)
+    if title.include?('®')
+      clean_title = title.split('®').join
+    elsif title.include?('©')
+      clean_title = title.split('©').join
+    else
+      clean_title = title
+    end
+
+
+
     url = "https://api.igdb.com/v4/games"
     headers = { "Client-ID" => ENV["Client-ID"], Authorization: ENV["Authorization"] }
-    query = { fields: 'cover.*', search: title }
+    query = { fields: 'cover.*', search: clean_title }
 
     response = HTTParty.post(
       url,
