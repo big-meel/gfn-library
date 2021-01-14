@@ -13,9 +13,6 @@
 
 <div class= "cards">
   <% @games.each do |game|  %>
-  <div class="g-card"> 
-    <%= image_tag  game.image_url.nil? ? "gfn-placeholder.jpg" : game.image_url, class: "cover-img" %>
-    <p><%= game["title"] %></p> 
-  </div>
+    <%= render partial: "games/card", locals: { game: game} %>
   <% end %>
 </div>

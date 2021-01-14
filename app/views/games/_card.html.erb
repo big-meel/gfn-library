@@ -1,0 +1,18 @@
+<% if game.steam_url.present? || !game.steam_url.blank? %>
+
+  <%= link_to game.steam_url.present? ? game.steam_url : '#' do %>
+    <div class="g-card"> 
+      <%= image_tag  game.image_url.nil? ? "gfn-placeholder.jpg" : game.image_url, class: "cover-img" %>
+      <p><%= game["title"] %>  (<%= game.store %>)</p> 
+    </div>
+  <% end %>
+
+<% else %>
+
+  <div class="g-card"> 
+    <%= image_tag  game.image_url.nil? ? "gfn-placeholder.jpg" : game.image_url, class: "cover-img" %>
+    <p><%= game["title"] %> </p> 
+  </div>
+
+
+<% end %>
