@@ -25,6 +25,21 @@
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
+
+  .cards a {
+    text-decoration: none;
+    color: #49cc0c;
+  }
+
+  .cards a:hover {
+    color: #a2f17d;
+  }
+
+  .cards a img:hover {
+   border: solid #a2f17d; 
+  // box-shadow: 1.5px 1.5px #49cc0c;
+
+  }
   
   .g-card img{
     max-width: 264px;
