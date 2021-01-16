@@ -27,7 +27,7 @@ Sometimes there may be changes or updates made to the records themselves by Nvid
 the records up to date. (This is also set to run every Thursday)
 
 ## Get images
-After signing up for a twitch account and secret, and getting authentication from igdb, run `rake games:update_files`
+After signing up for a twitch account and secret, and getting authentication from igdb, run `rake games:update_images`
 
 
 
