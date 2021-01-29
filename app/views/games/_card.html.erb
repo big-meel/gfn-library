@@ -7,6 +7,15 @@
     </div>
   <% end %>
 
+<% elsif game.store == "Epic" %>
+
+  <%= link_to "https://www.epicgames.com" do %>
+    <div class="g-card"> 
+      <%= image_tag  game.image_url.nil? ? "gfn-placeholder.jpg" : game.image_url, class: "cover-img" %>
+      <p><%= game["title"] %>  (<%= game.store %>)</p> 
+    </div>
+  <% end %>
+
 <% else %>
 
   <div class="g-card"> 
