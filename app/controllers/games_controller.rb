@@ -4,13 +4,10 @@ class GamesController < ApplicationController
   require 'set'
 
   def index
-    # @games = Game.all
-    # byebug
     @page = params[:page] || 1
     @games = Game.search(params[:search]).page(@page).per(100)
 
     # @games = filter_by_genre(@games, params[:genre])
-    # byebug
   end
 
   private

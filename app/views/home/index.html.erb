@@ -1,4 +1,4 @@
-<h1>Catalog </h1>
+<h1 class="title">Geforce Now Library </h1>
 
 <div class="g-search flex items-center justify-center w-screen h-screen bg-gray-800">
   <%= form_tag games_path, method: :get do %>
@@ -10,6 +10,8 @@
     <%# select_tag :store, options_for_select( ["Action"] ) %>
   <% end %>
 </div>
+
+<%= paginate @games %>
 
 <div class= "cards">
   <% @games.each do |game|  %>

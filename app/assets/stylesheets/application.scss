@@ -16,8 +16,8 @@
 
 
  body {
-   background-color: #1a202c;
-   color: #49cc0c;
+   background-color: #000000;
+   color: #76b900;
  }
 
  .cards {
@@ -26,18 +26,53 @@
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   }
 
+  .title {
+    color:white;
+  }
+
+  .g-search {
+    padding-bottom: 50px;
+    margin-left: 0px;
+  }
+
+  .pagination {
+    padding-bottom: 25px;
+    
+  }
+
+  .pagination .page a{
+    // color: #76b900;
+    color:#000000;
+    text-decoration: none;
+    padding: 0px 5px;
+    background-color: white;
+  }
+
+  .g-search input{
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 2px;
+    color: #76b900;
+    padding-right: 150px;
+    font-size: x-large;
+  }
+
   .cards a {
     text-decoration: none;
-    color: #49cc0c;
+    color: #76b900;
   }
 
   .cards a:hover {
-    color: #a2f17d;
+    // color: #a2f17d;
+    color: white;
   }
 
   .cards a img:hover {
-   border: solid #a2f17d; 
-  // box-shadow: 1.5px 1.5px #49cc0c;
+  //  border: solid #a2f17d; 
+  border: solid white;
+  // box-shadow: 1.5px 1.5px #76b900;
 
   }
   
