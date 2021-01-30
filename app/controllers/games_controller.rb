@@ -6,8 +6,8 @@ class GamesController < ApplicationController
   def index
     # @games = Game.all
     # byebug
-    # @page = params[:page] || 1
-    @games = Game.search(params[:search]).page(1).per(100)
+    @page = params[:page] || 1
+    @games = Game.search(params[:search]).page(@page).per(100)
 
     # @games = filter_by_genre(@games, params[:genre])
     # byebug
@@ -24,7 +24,7 @@ class GamesController < ApplicationController
     end
 
   def search_params
-    params.permit(:search, :genre, :online_store, :page)
+    params.permit(:search, :genre, :online_store)
   end
 
 end
