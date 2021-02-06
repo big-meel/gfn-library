@@ -11,9 +11,18 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+  <header class="nav">
+    <%= link_to 'Home', root_path %>
+    <%= link_to 'Games', games_path%>
+  </header>
+
   <body class="">
     <%= yield %>
   </body>
 
-  <footer> <%# Add Footer details here %> </footer>
+  <footer class="footer"> 
+    <%# Add Footer details here %>
+    <p> © 2021 - All Rights reserved </p>
+    <p>Built by  <%= link_to 'Jameel Tomlinson', "https://www.linkedin.com/in/jameel-tomlinson-7b3379203/" %> </p> 
+  </footer>
 </html>

@@ -16,11 +16,23 @@
 
 
  body {
-   background-color: #000000;
+   background-color: #12181b;
    color: #76b900;
  }
 
- .cards {
+ .footer a{
+   color: #76b900;
+   text-decoration: none;
+   font-weight: bolder;
+ }
+
+ .nav a{
+  color: #76b900;
+  text-decoration: none;
+  font-weight: bolder;
+ }
+
+  .cards {
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
