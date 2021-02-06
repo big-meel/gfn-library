@@ -35,7 +35,6 @@ After signing up for a twitch account and secret, and getting authentication fro
 
 - Sorting (Category, Store, etc...), 
 - About Project, 
-- Links to store to purchase games
 - Link to forum posts
 - Link to error/bug/request form for GFN
 - Better Documentaion! :')
