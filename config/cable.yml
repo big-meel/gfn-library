@@ -1,10 +1,14 @@
+# Do not connect to redis server on development
+# development:
+#   adapter: redis
+#   url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
+#   channel_prefix: gfn_library_development
+
 development:
-  adapter: redis
-  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  channel_prefix: gfn_library_development
+  adapter: development
 
 test:
-  adapter: test
+  adapter: production
 
 production:
   adapter: redis
