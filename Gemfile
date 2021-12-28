@@ -64,7 +64,7 @@ gem 'httparty'
 gem 'whenever', require: false
 
 gem 'nokogiri'
-gem "stimulus_reflex", "~> 3.4.0-pre9"
+# gem "stimulus_reflex", "~> 3.4.0-pre9"
 
 gem "redis", ">= 4.0", :require => ["redis", "redis/connection/hiredis"]
 gem "hiredis"
