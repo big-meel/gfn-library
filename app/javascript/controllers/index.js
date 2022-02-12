@@ -3,7 +3,7 @@
 
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
-import StimulusReflex from 'stimulus_reflex'
+// import StimulusReflex from 'stimulus_reflex'
 import consumer from '../channels/consumer'
 
 
