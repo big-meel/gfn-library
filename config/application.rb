@@ -10,7 +10,7 @@ module GfnLibrary
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
-    config.assets.initialize_on_precompile = true
+    # config.assets.initialize_on_precompile = true
 
     # Configuration for the application, engines, and railties goes here.
     #
