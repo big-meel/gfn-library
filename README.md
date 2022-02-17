@@ -5,6 +5,8 @@ Nothing fancy just a curated list of all the games GFN has to offer, created usi
 Browse through the list or search for a game you like to see if its there. List is updated with new games and info every Thursday pulling 12:00 PM.
 This is a fully open sourced project so feel free to contribute and suggest new features!
 
+### See it here at [gfn-library.herokuapp.com]gfn-library.herokuapp.com
+
 ## Setup: 
 1. Install rails
 2. Install postgresql
@@ -38,6 +40,9 @@ After signing up for a twitch account and secret, and getting authentication fro
 - Link to forum posts
 - Link to error/bug/request form for GFN
 - Better Documentaion! :')
+
+
+### Give Feedback/Suggestions at Twitter.com @jameel_tweets or Email me at meel.tomlinson@gmail.com
 
 
  
