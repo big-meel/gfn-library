@@ -5,7 +5,7 @@ Nothing fancy just a curated list of all the games GFN has to offer, created usi
 Browse through the list or search for a game you like to see if its there. List is updated with new games and info every Thursday pulling 12:00 PM.
 This is a fully open sourced project so feel free to contribute and suggest new features!
 
-### See it here at [gfn-library.herokuapp.com](gfn-library.herokuapp.com)
+### See it here at [gfn-library.herokuapp.com](http://gfn-library.herokuapp.com)
 
 ## Setup: 
 1. Install rails
