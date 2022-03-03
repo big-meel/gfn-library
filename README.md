@@ -7,6 +7,8 @@ This is a fully open sourced project so feel free to contribute and suggest new 
 
 ### See it here at [gfn-library.herokuapp.com](http://gfn-library.herokuapp.com)
 
+## For forking and contribution purposes:
+
 ## Setup: 
 1. Install rails
 2. Install postgresql
