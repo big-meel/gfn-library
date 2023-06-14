@@ -27,10 +27,10 @@ class Game < ApplicationRecord
       clean_title = title
     end
 
-
+    # Add check for authentication
 
     url = "https://api.igdb.com/v4/games"
-    headers = { "Client-ID" => ENV["Client-ID"], Authorization: ENV["Authorization"] }
+    headers = { "Client-ID" => ENV["CLIENT_ID"], Authorization:"Bearer #{ENV["ACCESS_TOKEN"]}" }
     query = { fields: 'cover.*', search: clean_title }
 
     response = HTTParty.post(
@@ -38,7 +38,6 @@ class Game < ApplicationRecord
       headers: headers,
       query: query
     ).to_s
-
 
     JSON.parse(response)[0]["cover"] rescue nil
 

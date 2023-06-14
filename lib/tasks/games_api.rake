@@ -64,7 +64,7 @@ namespace :games do
 
       g.update(image_url: "https://images.igdb.com/igdb/image/upload/t_cover_big/#{response["image_id"]}.jpg") unless response.nil?
 
-      puts "#{(i/games.count.to_f) * 100} Complete..."
+      puts "#{((i/games.count.to_f) * 100).round(1)}% Complete..."
     end
 
     puts "Done!"
