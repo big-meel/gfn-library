@@ -17,7 +17,7 @@ class Game < ApplicationRecord
     end
   end
 
-
+  # Class methods to scrape images from IGDB
   def self.scrape_images(title)
     if title.include?('®')
       clean_title = title.split('®').join
