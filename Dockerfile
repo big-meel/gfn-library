@@ -1,8 +1,8 @@
 # syntax = docker/dockerfile:1
 
 # Make sure RUBY_VERSION matches the Ruby version in .ruby-version and Gemfile
-ARG RUBY_VERSION=3.0.0
-FROM ruby:$RUBY_VERSION-slim as base
+ARG RUBY_VERSION=3.0.6
+FROM ruby:3.0-slim as base
 
 LABEL fly_launch_runtime="rails"
 
@@ -24,7 +24,7 @@ FROM base as build
 
 # Install packages needed to build gems and node modules
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential curl libpq-dev libvips node-gyp pkg-config python
+    apt-get install --no-install-recommends -y build-essential curl libpq-dev libvips node-gyp pkg-config python nodejs npm
 
 # Install yarn
 ARG YARN_VERSION=1.22.19
@@ -66,7 +66,10 @@ COPY --from=build /usr/local/bundle /usr/local/bundle
 COPY --from=build /rails /rails
 
 # Run and own only the runtime files as a non-root user for security
-RUN useradd rails --create-home --shell /bin/bash && \
+ARG UID=1000 \
+    GID=1000
+RUN groupadd -f -g $GID rails && \
+    useradd -u $UID -g $GID rails --create-home --shell /bin/bash && \
     chown -R rails:rails db log storage tmp
 USER rails:rails
 
