@@ -62,6 +62,7 @@ namespace :games do
     games.each_with_index do |g, i|
       response = Game.scrape_images(g.title)
 
+      # NOTE: unable to complete this task on fly.io due to insufficient memory, requires more efficient way to handle images
       g.update(image_url: "https://images.igdb.com/igdb/image/upload/t_cover_big/#{response["image_id"]}.jpg") unless response.nil?
 
       Rails.logger.info "#{((i/games.count.to_f) * 100).round(1)}% Complete..."
