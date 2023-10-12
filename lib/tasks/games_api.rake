@@ -26,7 +26,7 @@ namespace :games do
       end
     end
     
-    puts "Done!"
+    Rails.logger.info "Done!"
   end
 
 
@@ -52,7 +52,7 @@ namespace :games do
       ) rescue nil
     end
 
-    puts 'Updated!'
+    Rails.logger.info 'Updated!'
   end
 
 
@@ -64,10 +64,10 @@ namespace :games do
 
       g.update(image_url: "https://images.igdb.com/igdb/image/upload/t_cover_big/#{response["image_id"]}.jpg") unless response.nil?
 
-      puts "#{((i/games.count.to_f) * 100).round(1)}% Complete..."
+      Rails.logger.info "#{((i/games.count.to_f) * 100).round(1)}% Complete..."
     end
 
-    puts "Done!"
+    Rails.logger.info "Done!"
   end
 
 end
